@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="BESTOURS - Travel and Tours multipurpose template">
 	<meta name="author" content="Ansonika">
-	<title>BESTOURS - Travel and Tours multipurpose template</title>
+	<title>Peak Pedals</title>
 
 	<!-- Favicons-->
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -70,7 +70,7 @@
 			</div>
 			<!-- End top line-->
 
-			<div class="container">
+			<!-- <div class="container">
 				<div class="row">
 					<div class="col-md-3 col-sm-3 col-xs-3">
 						<div id="logo_home">
@@ -91,64 +91,18 @@
 							<ul>
 								<li class="submenu">
 									<a href="index_2.html" class="show-submenu">Home</a>
-									<!-- <ul>
-										<li><a href="index.html">Home Video background</a>
-										</li>
-										<li><a href="index_2.html">Home Layer Slider</a>
-										</li>
-										<li><a href="index_3.html">Home Full Header</a>
-										</li>
-										<li><a href="index_4.html">Home Popup</a>
-										</li>
-										<li><a href="index_5.html">Home Cookie bar</a>
-										</li>
-									</ul> -->
+								
 								</li>
 								<li class="submenu">
 									<a href="grid.html" class="show-submenu">Tours</a>
-									<!-- <ul>
-										<li><a href="grid.html">Grid view</a>
-										</li>
-										<li><a href="list.html">List view</a>
-										</li>
-										<li><a href="detail-page.html">Tour Detail</a>
-										</li>
-									</ul> -->
+								
 								</li>
 								<li>
 									<a href="about.html">About us</a>
 								</li>
 								<li><a href="faq.html">Faq</a>
 								</li>
-								<!-- <li class="submenu">
-									<a href="javascript:void(0);" class="show-submenu">Other pages</a>
-									<ul>
-										<li><a href="index_3.html">Header Version 2</a>
-										</li>
-										<li><a href="blog.html">Blog</a>
-										</li>
-										<li><a href="blog_post.html">Blog post</a>
-										</li>
-										<li><a href="gallery.html">Gallery</a>
-										</li>
-										<li><a href="maintenance.html">Mantainance</a>
-										</li>
-										<li><a href="profile.html">Team Profile</a>
-										</li>
-										<li><a href="contacts_2.html">Contact 2</a>
-										</li>
-										<li><a href="coming_soon/index.html">Coming soon</a>
-										</li>
-										<li><a href="shortcodes.html">Shortcodes</a>
-										</li>
-										<li><a href="icon_pack_1.html">Icon pack 1</a>
-										</li>
-										<li><a href="icon_pack_2.html">Icon pack 2</a>
-										</li>
-										<li><a href="icon_pack_3.html">Icon pack 3</a>
-										</li>
-									</ul>
-								</li> -->
+								
 								<li>
 									<a href="contacts.html">Contact us</a>
 								</li>
@@ -188,21 +142,27 @@
                                         <p class="text-center hidden-xs">
                                             <a href="#" class="btn_outline">MORE DEMOS SOON</a>
                                     </div>
-                                    <!-- End menu-wrapper -->
+                                
                                 </li>
 							</ul>
 						</div>
-						<!-- End main-menu -->
+					
 					</nav>
 				</div>
-			</div>
-			<!-- container -->
-		</header>
-		<!-- End Header -->
-	</div>
-	<!-- End Header 1-->
+			</div> -->
+			<div class="container" id="navbar-container"></div>
 
-	<!-- Slider -->
+			<script>
+			  fetch("navbar.html")
+				.then(response => response.text())
+				.then(data => {
+				  document.getElementById("navbar-container").innerHTML = data;
+				});
+			</script>
+		</header>
+		
+	</div>
+
 	<div id="full-slider-wrapper">
 		<div id="layerslider" style="width:100%;height:600px;">
 			<!-- first slide -->
@@ -242,7 +202,7 @@
 		<div class="container">
 
 			<div class="main_title">
-				<h2>Our <span>Top</span> Travel Tours</h2>
+				<h2>Our <span>Top</span> E Bike Picnics</h2>
 				<p>From misty mountains to lush tea estates, explore the highlands like never before on our guided tours.</p>
 			</div>
 			<div class="row">
@@ -334,17 +294,17 @@
 			<!-- End row -->
 
 			<div class="main_title_2">
-				<h3>View other <span>popular</span> tours</h3>
+				<h3>View other <span>popular</span> picnics</h3>
 				<p>Explore more adventures loved by our riders.</p>
 			</div>
 			<div class="row list_tours">
 				<div class="col-sm-6">
-					<h3>New Tours</h3>
+					<h3>New E bike Tours</h3>
 					<ul>
 						<li>
 							<div>
 								<a href="detail-page.html">
-									<figure><img src="img/thumb_tabs_1.jpg" alt="thumb" class="img-rounded" width="60" height="60">
+									<figure><img src="img/haputale.jpeg" alt="thumb" class="img-rounded" width="60" height="60">
 									</figure>
 									<h4>Haputale</h4>
 									<small>2 Hours</small>
@@ -355,7 +315,7 @@
 						<li>
 							<div>
 								<a href="detail-page.html">
-									<figure><img src="img/thumb_tabs_2.jpg" alt="thumb" class="img-rounded" width="60" height="60">
+									<figure><img src="img/ohiya.jpeg" alt="thumb" class="img-rounded" width="60" height="60">
 									</figure>
 									<h4>Ohiya</h4>
 									<small>Duration 3hr</small>
@@ -366,7 +326,7 @@
 						<li>
 							<div>
 								<a href="detail-page.html">
-									<figure><img src="img/thumb_tabs_3.jpg" alt="thumb" class="img-rounded" width="60" height="60">
+									<figure><img src="img/ravana.jpeg" alt="thumb" class="img-rounded" width="60" height="60">
 									</figure>
 									<h4>Ravana ella</h4>
 									<small>Duration 1hr </small>
@@ -383,7 +343,7 @@
 						<li>
 							<div>
 								<a href="detail-page.html">
-									<figure><img src="img/thumb_tabs_4.jpg" alt="thumb" class="img-rounded" width="60" height="60">
+									<figure><img src="img/pokuna.jpeg" alt="thumb" class="img-rounded" width="60" height="60">
 									</figure>
 									<h4>Ravana Cave Visit package</h4>
 									<small>Duration 4hr </small>
@@ -394,7 +354,7 @@
 						<li>
 							<div>
 								<a href="detail-page.html">
-									<figure><img src="img/thumb_tabs_5.jpg" alt="thumb" class="img-rounded" width="60" height="60">
+									<figure><img src="img/diyaluma.jpeg" alt="thumb" class="img-rounded" width="60" height="60">
 									</figure>
 									<h4>Diyaluma Waterfall</h4>
 									<small>Duration 2hr 20 minutes</small>
@@ -405,7 +365,7 @@
 						<li>
 							<div>
 								<a href="detail-page.html">
-									<figure><img src="img/thumb_tabs_6.jpg" alt="thumb" class="img-rounded" width="60" height="60">
+									<figure><img src="img/dova.jpeg" alt="thumb" class="img-rounded" width="60" height="60">
 									</figure>
 									<h4>Tea factory and Dova temple </h4>
 									<small>Duration 2hr 20 minutes</small>
@@ -473,9 +433,9 @@
 								<div>
 									<div class="box_overlay">
 										<div class="pic">
-											<figure><img src="img/testimonial_1.jpg" alt="" class="img-circle">
+											<figure><img src="img/samia.jpeg" alt="" class="img-circle">
 											</figure>
-											<h4>Roberta<small>12 October 2015</small></h4>
+											<h4>Samia<small>12 October 2024</small></h4>
 										</div>
 										<div class="comment">
 											"From eco-friendly bikes to knowledgeable guides, Peak Pedals made our tour the highlight of our trip."
@@ -487,12 +447,12 @@
 								<div>
 									<div class="box_overlay">
 										<div class="pic">
-											<figure><img src="img/testimonial_1.jpg" alt="" class="img-circle">
+											<figure><img src="img/moto.jpeg" alt="" class="img-circle">
 											</figure>
-											<h4>Roberta<small>12 October 2015</small></h4>
+											<h4>ride2wheelsadv<small>02 january 2025</small></h4>
 										</div>
 										<div class="comment">
-											"No nam indoctum accommodare, vix ei discere civibus philosophia. Vis ea dicant diceret ocurreret."
+											"I love that Peak Pedals is all about sustainable travel. The e-bike was a game changer, and the fresh local lunch was such a nice touch. Highly recommend for anyone visiting Ella!"
 										</div>
 									</div>
 									<!-- End box_overlay -->
@@ -501,12 +461,12 @@
 								<div>
 									<div class="box_overlay">
 										<div class="pic">
-											<figure><img src="img/testimonial_1.jpg" alt="" class="img-circle">
+											<figure><img src="img/prabath.jpeg" alt="" class="img-circle">
 											</figure>
-											<h4>Roberta<small>12 October 2015</small></h4>
+											<h4>Prabhath<small>12 February 2025</small></h4>
 										</div>
 										<div class="comment">
-											"No nam indoctum accommodare, vix ei discere civibus philosophia. Vis ea dicant diceret ocurreret."
+											"Cycling up to Lipton’s Seat with Peak Pedals was the highlight of my Sri Lanka trip. The views were unreal, the tea fields magical, and the e-bike made the climb smooth and fun."
 										</div>
 									</div>
 									<!-- End box_overlay -->
@@ -533,7 +493,7 @@
 				<div class="col-md-3 col-sm-3">
 					<h3>Need help?</h3>
 					<a href="tel://004542344599" id="phone">+94 717401012</a>
-					<a href="mailto:help@citytours.com" id="email_footer">help@bestours.com</a>
+					<a href="mailto:help@citytours.com" id="email_footer">peakpedals3@gmail.com</a>
 				</div>
 				<div class="col-md-2 col-sm-3">
 					<h3>About</h3>
@@ -551,16 +511,15 @@
 					</ul>
 				</div>
 				<div class="col-md-4 col-sm-6">
-					<h3>Top Tours</h3>
+					<h3>Top Picnics</h3>
 					<ul>
-						<li><a href="#">Western River</a>
+						<li><a href="#">Idalgashinna</a>
 						</li>
-						<li><a href="#">Colorado River</a>
+						<li><a href="#">Lipton's Seat</a>
 						</li>
-						<li><a href="#">West Adventure</a>
+						<li><a href="#">Bambaragala Pathana</a>
 						</li>
-						<li><a href="#">Colorado River</a>
-						</li>
+						
 					</ul>
 					
 				</div>
@@ -580,15 +539,15 @@
 			<hr>
 			<div class="row">
 				<div class="col-sm-8">
-					<div class="styled-select">
+					<!-- <div class="styled-select">
 						<select class="form-control" name="lang" id="lang">
 							<option value="English" selected>English</option>
 							<option value="French">French</option>
 							<option value="Spanish">Spanish</option>
 							<option value="Russian">Russian</option>
 						</select>
-					</div>
-					<span id="copy">© BestTours 2023 - All rights reserved</span>
+					</div> -->
+					<span id="copy">© PeakPedals 2025 - All rights reserved</span>
 				</div>
 				<div class="col-sm-4" id="social_footer">
 					<ul>
