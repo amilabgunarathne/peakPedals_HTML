@@ -1,0 +1,18 @@
+{
+  "liptons-seat": {
+    "title": "Lipton’s Seat",
+    "subTitle" : "Pedal Through Misty Tea Gardens to Lipton’s Legendary View",
+    "price": "100",
+    "duration": "1 day",
+     
+    "image": "images/liptons.jpg",
+    "description": "Ride through tea trails to one of Sri Lanka’s most iconic viewpoints..."
+  },
+  "bambaragala": {
+    "title": "Bambaragala Pathana",
+    "duration": "1 day",
+    "image": "images/bambaragala.jpg",
+    "description": "A misty trail through cloud forests and peaceful paths..."
+  }
+
+}

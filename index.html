@@ -72,7 +72,7 @@
 				<p class="ls-l slide_typo_1" style="top:55%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">
 					Scenic Trails - Hidden Gems - Picnic-Style Experiences
 				</p>
-				<a class="ls-l button_intro_2 outline" style="top:65%; left:50%;white-space: nowrap;" data-ls="durationin:2000;delayin:1400;easingin:easeOutElastic;" href='grid.html'>Read more</a>
+				<a class="ls-l button_intro_2 outline" style="top:65%; left:50%;white-space: nowrap;" data-ls="durationin:2000;delayin:1400;easingin:easeOutElastic;" href="#" data-target="#tours_anchor">Book a picnic</a>
 			</div>
 			<!-- second slide -->
 			<div class="ls-slide" data-ls="slidedelay:5000; transition2d:103;">
@@ -81,7 +81,7 @@
 				<p class="ls-l slide_typo_2" style="top:55%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">
 					We offer a variety of services and options
 				</p>
-				<a class="ls-l button_intro_2 outline" style="top:65%; left:50%;white-space: nowrap;" data-ls="durationin:2000;delayin:1400;easingin:easeOutElastic;" href='grid.html'>Read more</a>
+				<a class="ls-l button_intro_2 outline" style="top:65%; left:50%;white-space: nowrap;" data-ls="durationin:2000;delayin:1400;easingin:easeOutElastic;" href='about.html'>Read more</a>
 			</div>
 			<!-- third slide -->
 			<div class="ls-slide" data-ls="slidedelay: 5000; transition2d:5;">
@@ -90,20 +90,20 @@
 				<p class="ls-l slide_typo_2" style="top:55%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">
 					Scenic Trails - Hidden Gems - Picnic-Style Experiences
 				</p>
-				<a class="ls-l button_intro_2" style="top:65%; left:50%;" data-ls="durationin:2000;delayin:1400;easingin:easeOutElastic;" href='grid.html'>Explore</a>
+				<a class="ls-l button_intro_2" style="top:65%; left:50%;" data-ls="durationin:2000;delayin:1400;easingin:easeOutElastic;" href="#" data-target="#tours_anchor">Explore</a>
 			</div>
 		</div>
 	</div>
 	<!-- End layerslider -->
-
-	<section class="wrapper">
+<div id="tours_anchor"style="position: relative; top: -140px;"></div>
+	<section class="wrapper" id="tours_anchor" >
 		<div class="divider_border"></div>
 
-		<div class="container">
+		<div class="container" >
 
 			<div class="main_title">
-				<h2>Our <span>Top</span> E Bike Picnics</h2>
-				<p>From misty mountains to lush tea estates, explore the highlands like never before on our guided tours.</p>
+				<h2 >Our <span>Top</span> E Bike Picnics</h2>
+				<p>From misty mountains to lush tea estates, explore the highlands like never before on our guided picnics.</p>
 			</div>
 			<div class="row">
 				<div class="col-md-4 col-sm-6 wow fadeIn animated" data-wow-delay="0.2s">
@@ -111,11 +111,12 @@
 						<div class="ribbon">
 							<span>Popular</span>
 						</div>
+					
 						<div class="price_grid">
 							<sup>$</sup>100
 						</div>
 						<div class="img_container">
-							<a href="detail-page.html">
+							<a href="detail-page.html?id=liptons-seat">
 								<img src="img/idal.jpg" width="800" height="533" class="img-responsive" alt="">
 								<div class="short_info">
 									<h3>Idalgashinna</h3>
@@ -138,7 +139,7 @@
 				<div class="col-md-4 col-sm-6 wow fadeIn animated" data-wow-delay="0.2s">
 					<div class="img_wrapper">
 						<div class="ribbon">
-							<span>Popular</span>
+							<!-- <span>Popular</span> -->
 						</div>
 						<div class="price_grid">
 							<sup>$</sup>100
@@ -164,9 +165,9 @@
 
 				<div class="col-md-4 col-sm-6 wow fadeIn animated" data-wow-delay="0.2s">
 					<div class="img_wrapper">
-						<div class="ribbon">
+						<!-- <div class="ribbon">
 							<span>Popular</span>
-						</div>
+						</div> -->
 						<div class="price_grid">
 							<sup>$</sup>100
 						</div>
@@ -480,7 +481,20 @@
 		</form>
 	</div>
 	<!-- End Search Menu -->
-
+<script>
+  // Wait until the DOM is ready
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('a[data-target]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('data-target'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  });
+</script>
 	<!-- COMMON SCRIPTS -->
 	<script src="js/jquery-3.7.0.min.js"></script>
 	<script src="js/common_scripts_min.js"></script>

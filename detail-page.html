@@ -47,7 +47,7 @@
 	<!-- Header================================================== -->
 	<div id="header_1">
 		<header>
-			<div id="top_line">
+			<!-- <div id="top_line">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6 col-sm-6 col-xs-12">
@@ -62,11 +62,11 @@
 							</ul>
 						</div>
 					</div>
-					<!-- End row -->
+				
 				</div>
-				<!-- End container-->
+				
 			</div>
-			<!-- End top line-->
+		
 
 			<div class="container">
 				<div class="row">
@@ -187,17 +187,25 @@
                                         <p class="text-center hidden-xs">
                                             <a href="#" class="btn_outline">MORE DEMOS SOON</a>
                                     </div>
-                                    <!-- End menu-wrapper -->
+                                  
                                 </li>
 							</ul>
 						</div>
-						<!-- End main-menu -->
+						
 					</nav>
 				</div>
-			</div>
-			<!-- container -->
+			</div> -->
+				<div id="navbar-container"></div>
+
+			<script>
+			  fetch("navbar.html")
+				.then(response => response.text())
+				.then(data => {
+				  document.getElementById("navbar-container").innerHTML = data;
+				});
+			</script>
 		</header>
-		<!-- End Header -->
+	
 	</div>
 	<!-- End Header 1-->
 
@@ -205,8 +213,8 @@
 	<section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_list_museum_in.jpg" data-natural-width="1400" data-natural-height="470">
 		<div id="sub_content_in">
 			<div id="animate_intro">
-				<h1>Enjoy Maldive</h1>
-				<p>"Usu habeo equidem sanctus no ex melius labitur conceptam eos"</p>
+				<h1 id="tour-title"></h1>
+				<p id="tour-subTitle"></p>
 			</div>
 		</div>
 	</section>
@@ -537,7 +545,7 @@
 				<aside class="col-md-4">
 					<div class="box_style_1">
 						<div class="price">
-							<strong>$649</strong><small>per person</small>
+							$<strong id="tour-price"></strong><small>per person</small>
 						</div>
 						<ul class="list_ok">
 							<li>Sea te propriae lobortis</li>
@@ -575,7 +583,7 @@
 								<tbody>
 									<tr>
 										<td><strong>Adult</strong><a href="#" class="tooltip-1" data-placement="top" title="" data-original-title="16 - 65 years old"><sup class="icon-info-4"></sup></a>
-											<span class="price">$8.25</span>
+											<span class="price" id="tourPrice"></span>
 										</td>
 										<td>
 											<div class="styled-select">
@@ -596,52 +604,7 @@
 										</td>
 										<td class="text-center"><span class="subtotal">$0</span>
 										</td>
-									</tr>
-									<tr>
-										<td><strong>Senior</strong><a href="#" class="tooltip-1" data-placement="top" title="" data-original-title="Over 65 years old"><sup class="icon-info-4"></sup></a><span class="price">$6.75</span>
-										</td>
-										<td>
-											<div class="styled-select">
-												<select class="form-control" name="senior" id="senior">
-													<option value="">Select</option>
-													<option value="0">0</option>
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													<option value="5">5</option>
-													<option value="6">6</option>
-													<option value="7">7</option>
-													<option value="8">8</option>
-													<option value="9">9</option>
-												</select>
-											</div>
-										</td>
-										<td class="text-center"><span class="subtotal">$0</span>
-										</td>
-									</tr>
-									<tr>
-										<td><strong>Student</strong> <span class="price">$6.75</span> </td>
-										<td>
-											<div class="styled-select">
-												<select class="form-control" name="student" id="student">
-													<option value="">Select</option>
-													<option value="0">0</option>
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													<option value="5">5</option>
-													<option value="6">6</option>
-													<option value="7">7</option>
-													<option value="8">8</option>
-													<option value="9">9</option>
-												</select>
-											</div>
-										</td>
-										<td class="text-center"><span class="subtotal">$0</span>
-										</td>
-									</tr>
+								
 								</tbody>
 							</table>
 
@@ -661,10 +624,7 @@
 								<label>Telephone</label>
 								<input type="text" class="form-control" id="telephone_booking" name="telephone_booking" placeholder="Telephone">
 							</div>
-							<div class="form-group add_bottom_30">
-								<label>Are you human? 3 + 1 =</label>
-								<input type="text" id="verify_booking" class=" form-control" placeholder="Are you human? 3 + 1 =">
-							</div>
+						
 							<div class="form-group">
 								<input type="submit" value="Book now" class="btn_full" id="submit-booking">
 							</div>
@@ -903,7 +863,73 @@
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
 	<script src="js/map.js"></script>
 	<script src="js/infobox.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const priceElement = document.getElementById("tourPrice");
+  const quantityElement = document.getElementById("adults");
+  const subtotalElement = document.getElementById("adultSubtotal");
+  const totalInput = document.getElementById("total");
 
+  function updateTotal() {
+    const price = parseFloat(priceElement.textContent || "0");
+    const quantity = parseInt(quantityElement.value || "0");
+    const subtotal = price * quantity;
+
+    subtotalElement.textContent = "$" + subtotal.toFixed(2);
+    totalInput.value = subtotal.toFixed(2);
+  }
+
+  // Initial calculation
+  updateTotal();
+
+  // Listen to changes
+  quantityElement.addEventListener("change", updateTotal);
+});
+</script>
+  <script>
+    // 1. Read the tour ID from URL
+	  let tourPrice = 0;  
+
+    const params = new URLSearchParams(window.location.search);
+    const tourId = params.get("id");
+
+    // 2. Fetch tour_details.json
+    fetch("tour_details.json")
+      .then(res => {
+        if (!res.ok) throw new Error("Could not load tour_details.json");
+        return res.json();
+      })
+      .then(tours => {
+        const tour = tours[tourId];
+        if (!tour) {
+          document.querySelector("main").innerHTML =
+            "<h2>Tour not found.</h2>";
+          return;
+        }
+        // 3. Inject into DOM
+	
+        document.getElementById("tour-title").textContent = tour.title;
+			
+		document.getElementById("tour-subTitle").textContent = tour.subTitle;
+		
+        // document.getElementById("tour-duration").textContent = tour.duration;
+			
+        // document.getElementById("tour-description").textContent = tour.description;
+	
+        // document.getElementById("tour-image").src = tour.image;
+
+        // document.getElementById("tour-image").alt = tour.title;
+
+	 	document.getElementById("tour-price").textContent = tour.price;	 
+		     tourPrice = parseFloat(tour.price);
+ 
+      })
+      .catch(err => {
+        console.error(err);
+        document.querySelector("main").innerHTML =
+          "<h2>Error loading tour data.</h2>";
+      });
+  </script>
 </body>
 
 
